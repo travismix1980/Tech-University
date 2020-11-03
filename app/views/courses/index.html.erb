@@ -1,0 +1,18 @@
+<h1 class="grey-text text-darken-2">Course Listing</h1>
+
+<div class="row">
+  <% @courses.each do |course| %>
+    <div class="col s6 m6">
+      <div class="card indigo lighten-1 jump">
+        <div class="card-content white-text">
+          <span class="card-title"> <%= course.short_name %> : <%= course.name %></span>
+          <p><%= course.description %></p>
+        </div>
+        <div class="card-action">
+          <a href="#">Enroll</a>
+          <a href="#">Info</a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
